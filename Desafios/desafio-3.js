@@ -1,7 +1,7 @@
 const fs = require('fs')
 const express = require('express')
 const app = express()
-const Contenedor = require('../../Clase-Desafio-2/desafio-2')
+const Contenedor = require('./desafio-2')
 
 app.listen(8080, ()=>{
     console.log('Servidor escuchando en el puerto 8080')
