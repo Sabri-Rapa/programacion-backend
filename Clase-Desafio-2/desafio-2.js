@@ -53,7 +53,7 @@ class Contenedor {
     try{
       const data = await fs.promises.readFile(this.file, "utf-8");
       const dataNotJson = JSON.parse(data);
-      console.log(dataNotJson)
+      return dataNotJson
     }catch(err){
       console.log(err)
     }
@@ -94,8 +94,11 @@ const newObject = {
 
 const contenedor = new Contenedor("productos");
 
-contenedor.save(newObject);
-contenedor.getById(2)
-contenedor.getAll()
-contenedor.deleteById(3)
-contenedor.deleteAll()
+// contenedor.save(newObject);
+// contenedor.getById(2)
+// contenedor.getAll()
+// contenedor.deleteById(3)
+// contenedor.deleteAll()
+
+
+module.exports = Contenedor
