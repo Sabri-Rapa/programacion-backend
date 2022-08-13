@@ -1,0 +1,57 @@
+.footer {
+  color: blue;
+}
+
+.product-img {
+  width: 300px;
+  max-width: 300px;
+  height: 200px;
+  max-height: 200px;
+}
+
+h1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(91, 46, 133);
+  display: grid;
+  justify-content: center;
+}
+.btnListado {
+  display: grid;
+  justify-content: center;
+}
+
+.productos {
+  font-size: 20px;
+  color: rgb(46, 46, 255);
+  display: grid;
+  justify-content: center;
+}
+
+.detalle {
+  margin: 40px 0px 5px 0px;
+}
+
+.btn {
+  background: #033649;
+  border-bottom: 1px solid #a2c5f7;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #999;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: "Raleway", Arial, Helvetica;
+  font-size: 14px;
+  /* height: 32px; */
+  padding: 2px 3px 2px 3px;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  width: 100px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #2f5168;
+}
+.btn:active {
+  transform: translateY(2px);
+  transition: all 0.1s ease 0s;
+}
