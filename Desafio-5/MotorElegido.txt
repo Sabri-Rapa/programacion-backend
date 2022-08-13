@@ -1,0 +1,1 @@
+Creo que el motor de plantilla que voy a usar es Ejs. Es el que tiene el lenguaje más conocido a js y jsx, por lo que es más rápido y sencillo acostumbrarse a él. El que definitivamente no usaría porque me pareció más complicado y poco práctico es Pug.
