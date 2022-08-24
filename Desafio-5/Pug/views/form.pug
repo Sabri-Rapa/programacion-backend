@@ -1,0 +1,15 @@
+html
+    head
+        title=title
+        style
+            include styles.css
+    body
+        h1='Cargar productos'
+        div(class='form')
+            form(action="/api/products", method="post")
+                input(type="text" id="title" name="title" 
+                placeholder="nombre")
+                input(type="text" id="price" name="price" placeholder="precio")                
+                input(type="text" id="thumbnail" name="thumbnail" placeholder="imagen")
+                input(type="submit")
+                <a class="btn" href="/api/products">Volver al listado</a>   

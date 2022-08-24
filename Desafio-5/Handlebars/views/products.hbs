@@ -1,0 +1,18 @@
+<h1>Listado de productos</h1>
+<div class="btnListado">
+
+ <a class="btn" href="/api/form">Agregar producto</a>   
+</div>
+{{#each products}}
+  <div class="productos">
+    <div class="detalle">
+      {{this.title}}<br />
+      ${{this.price}}
+    </div>
+    <div class="imagen">
+
+      <img src="{{this.thumbnail}}" class="product-img" />
+    </div>
+
+  </div>
+{{/each}}
