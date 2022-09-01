@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Lápiz",
+    "price": 200,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsT2d_tHFZQOv5_YOR628HtAumgN2hV1Gdg&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 1,
+    "timestamps": "31/8/2022 21:30:39"
+  },
+  {
+    "title": "Regla",
+    "price": 300,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 2,
+    "timestamps": "31/8/2022 21:31:24"
+  },
+  {
+    "title": "Marcador",
+    "price": 500,
+    "thumbnail": "https://www.laeditorial.com.ar/13475-large_default/marcador-edding-404-permanente-recargable.jpg",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 3,
+    "timestamps": "31/8/2022 21:31:54"
+  }
+]

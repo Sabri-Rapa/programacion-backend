@@ -1,0 +1,89 @@
+  {
+    "title": "Lápiz",
+    "price": 200,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsT2d_tHFZQOv5_YOR628HtAumgN2hV1Gdg&usqp=CAU",
+    "timestamp": "",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 1
+  },
+  {
+    "title": "Regla",
+    "price": 300,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "timestamp": "",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 2
+  },
+  {
+    "title": "Marcador",
+    "price": 500,
+    "thumbnail": "https://www.laeditorial.com.ar/13475-large_default/marcador-edding-404-permanente-recargable.jpg",
+    "timestamp": "",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 3
+  },
+  {
+    "title": "otra cosa",
+    "price": 399900,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "timestamp": "",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 4,
+    "timestamps": 1661910652519
+  },
+  {
+    "title": "otra cosa",
+    "price": 399900,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 5,
+    "timestamps": "1.661.910.788.423"
+  },
+  {
+    "title": "otra cosa",
+    "price": 399900,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 6
+  },
+  {
+    "title": "otra cosa",
+    "price": 399900,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 7
+  },
+  {
+    "title": "otra cosa",
+    "price": 399900,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtlsMK0awhSEcijR9gjOcNjxMh80ke2Ep1A&usqp=CAU",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 8,
+    "timestamps": "30/8/2022 22:56:36"
+  },
+  {
+    "title": "encendedor",
+    "price": 500,
+    "thumbnail": "https://www.laeditorial.com.ar/13475-large_default/marcador-edding-404-permanente-recargable.jpg",
+    "timestamp": "",
+    "descripción": "",
+    "código": "",
+    "stock": 3,
+    "id": 9
+  }

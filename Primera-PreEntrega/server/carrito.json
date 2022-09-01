@@ -1,0 +1,27 @@
+[
+  { "productos": [], "id": 2, "timestamps": "31/8/2022 21:27:16" },
+  {
+    "productos": [
+      {
+        "title": "Marcador",
+        "price": 500,
+        "thumbnail": "https://www.laeditorial.com.ar/13475-large_default/marcador-edding-404-permanente-recargable.jpg",
+        "descripción": "",
+        "código": "",
+        "stock": 3,
+        "id": 1
+      },
+      {
+        "title": "Lapicera",
+        "price": 700,
+        "thumbnail": "https://www.laeditorial.com.ar/13475-large_default/marcador-edding-404-permanente-recargable.jpg",
+        "descripción": "",
+        "código": "",
+        "stock": 3,
+        "id": 2
+      }
+    ],
+    "id": 1,
+    "timestamps": "31/8/2022 21:27:10"
+  }
+]
