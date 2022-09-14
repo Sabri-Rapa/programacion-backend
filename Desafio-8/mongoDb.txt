@@ -1,0 +1,83 @@
+
+1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. El formato de los documentos debe estar en correspondencia con el que venimos utilizando en el entregable con base de datos MariaDB.
+2)Definir las claves de los documentos en relación a los campos de las tablas de esa base. En el caso de los productos, poner valores al campo precio entre los 100 y 5000 pesos(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 2860, 3350, 4320, 4990).
+
+use ecommerce
+
+db.productos.insert([{title: 'Distancia de rescate', price: 2000, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'Harry Potter y el prisionero de Azkaban', price: 4000, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'}, {title: 'La melancólica muerte del chico ostra', price: 5000, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'}, {title: 'La loca de la casa', price: 1550, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'Demian', price: 750, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'Las crónicas de Narnia', price: 800, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'El señor de los anillos. El retorno del rey', price: 3300, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'}, {title: 'Ana Karenina', price: 2700, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'La naranja mecánica', price: 1600, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'},{title: 'La Eneida', price: 3500, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'}])
+
+db.mensajes.insert([{email: 'sabri@mail.com', mensaje: 'hola', fecha:'10/9/2022'},{email: 'sabri@mail.com', mensaje: 'probando base de datos', fecha:'10/9/2022'},{email: 'otromail@mail.com', mensaje: 'el producto que compré llegó con defectos', fecha:'11/9/2022'}, {email: 'pedro@mail.com', mensaje: 'Recomiendo mucho este artículo', fecha:'10/9/2022'}, {email: 'clau@mail.com', mensaje: '¿Cuánto demora el envío?', fecha:'11/9/2022'}, {email: 'marcos@mail.com', mensaje: 'Quiero hacer una devolución', fecha:'12/9/2022'}, {email: 'ernes@mail.com', mensaje: 'Quiero encargar 4 productos', fecha:'10/9/2022'}, {email: 'gus@mail.com', mensaje: 'El color es bellísimo', fecha:'12/9/2022'}, {email: 'carmen@mail.com', mensaje: 'excelente servicio', fecha:'10/9/2022'}, {email: 'juan@mail.com', mensaje: 'muy conforme', fecha:'10/9/2022'}])
+
+
+
+3) Listar todos los documentos en cada colección.
+
+db.productos.find().pretty()
+db.mensajes.find().pretty()
+
+
+4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+db.productos.estimatedDocumentCount()
+db.mensajes.estimatedDocumentCount()
+
+
+5) Realizar un CRUD sobre la colección de productos:
+
+a)Agregar un producto más en la colección de productos 
+
+db.productos.insertOne({title: 'Los árboles mueren de pie', price: 2635, thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1aQYaoyGJiUkrvyDNvA93LIhALWJey8DRg&usqp=CAU'})
+
+
+b) Realizar una consulta por nombre de producto específico:
+
+db.productos.find({title: {$eq: 'Distancia de rescate'}}).pretty()
+
+
+c)Listar los productos con precio menor a 1000 pesos.
+
+db.productos.find({price: {$lt: 1000}}).pretty()
+
+
+d) Listar los productos con precio entre los 1000 a 3000 pesos.
+
+db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte: 3000}}]}).pretty()
+
+
+
+e) Listar los productos con precio mayor a 3000 pesos.
+
+db.productos.find({price: {$gt: 3000}}).pretty()
+
+
+f) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
+db.productos.find().sort({price: 1}).skip(2).limit(1).pretty()
+
+
+g) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+
+db.productos.updateMany({}, {$inc: {stock: 100}})
+
+
+h) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos. 
+
+db.productos.updateMany({price: {$gte: 4000}}, {$set: {stock: 0}})
+
+
+i) Borrar los productos con precio menor a 1000 pesos 
+
+db.productos.deleteMany({price: {$lte: 1000}})
+
+
+6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce. Verificar que pepe no pueda cambiar la información.
+
+db.createUser(
+  {
+    user: "pepe",
+    pwd: "asd456",
+    roles: [
+       { role: "read", db: "ecommerce" }
+    ]
+  }
+)
