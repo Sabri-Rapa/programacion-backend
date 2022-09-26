@@ -1,18 +1,15 @@
-const express = require('express')
-const routes = require('./routes')
-const connectMG = require('./dbMongo')
+import express from 'express'
+import {router as routesMongo} from './src/routes/mongoDB/index.js'
+import {router as routesFirebase} from './src/routes/firebase/index.js'
 
 const app = express()
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
-app.use('/public', express.static(__dirname + '/public'))
+app.use(express.static('public'));
 
-app.use('/api', routes)
-
-const db = connectMG();
-if (db)console.log('Conexión a Mongo Ok')
-if (!db) throw 'can not connect to the db';
+app.use('/apiMongo', routesMongo)
+app.use('/apiFirebase', routesFirebase)
 
 
 const server = app.listen(8080, () =>{

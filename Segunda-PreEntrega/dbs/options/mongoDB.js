@@ -1,5 +1,4 @@
-const { connect } = require('mongoose');
-// import { Usuarios } from './models/usuario.js';
+import { connect } from 'mongoose';
 
 async function connectMG() {
   try {
@@ -9,5 +8,8 @@ async function connectMG() {
   }
 }
 
-module.exports = connectMG
+const db = await connectMG();
+if(db) console.log('Conectado a MongoDB')
+if(!db) throw 'No se pudo conectar MongoDB'
 
+export default db;
