@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <head>
+      <%- include('../partials/navbar')%>
+    </head>
+
+    </h1>
+      <h2> BIENVENIDO, <%= nombre? nombre : "" %> </h2>
+      <h3 id="div-compres"></h3>
+      <input
+        type="email"
+        id="email"
+        value=""
+        placeholder="...@email.com"
+      />
+      <br>
+      <input
+        type="text"
+        id="nombre"
+        value=""
+        placeholder="Nombre"
+      />
+      <br>
+      <input
+        type="text"
+        id="apellido"
+        value=""
+        placeholder="Apellido"
+      />
+      <br>
+      <input
+        type="number"
+        id="edad"
+        value=""
+        placeholder="Edad"
+      />
+      <br>
+      <input
+        type="text"
+        id="alias"
+        value=""
+        placeholder="Alias"
+      />
+      <br>
+      <input
+        type="text"
+        id="avatar"
+        value=""
+        placeholder="Avatar"
+      />
+      <br>
+      <input
+        type="text"
+        id="inputTextoMsj"
+        value=""
+        placeholder="Escriba su mensaje"
+      />
+      <div>
+          <button id="submitMessage">
+            Enviar msg
+          </button>
+        </div>
+        <div id="div-chats"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>
