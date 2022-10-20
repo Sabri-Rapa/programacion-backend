@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+
+    <header>
+      <%- include('../partials/navbar')%>
+    </header>
+
+    <h2>BIENVENIDO, <%= name? name : "" %></h2>
+
+    <div id="div-compres"></div>
+
+    <h3>PRODUCTOS</h3>
+   
+
+    <div id="products">
+      <table class="table my-1">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Creador</th>
+          </tr>
+        </thead>
+
+        <tbody id="productsTable">
+          <% products.forEach((element) => { %>
+
+          <tr>
+            <th scope="row"><%=element.id%></th>
+            <td style="text-transform: uppercase"><%=element.name%></td>
+            <td><%=element.price%></td>
+            <td>
+              <img src="<%=element.thumbnail%>" class="w-50" alt="..." />
+            </td>
+          </tr>
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+
+    <br />
+
+    <h3>COMENTARIOS</h3>
+    <div>
+      <input type="email" id="email" value="" placeholder="...@email.com" />
+
+      <br />
+
+      <input type="text" id="nombre" value="" placeholder="Nombre" />
+
+      <br />
+
+      <input type="text" id="apellido" value="" placeholder="Apellido" />
+
+      <br />
+
+      <input type="number" id="edad" value="" placeholder="Edad" />
+
+      <br />
+
+      <input type="text" id="alias" value="" placeholder="Alias" />
+
+      <br />
+
+      <input type="text" id="avatar" value="" placeholder="Avatar" />
+
+      <br />
+
+      <input
+        type="text"
+        id="inputTextoMsj"
+        value=""
+        placeholder="Escriba su mensaje"
+      />
+    </div>
+
+    <div>
+      <button id="submitMessage">Enviar</button>
+    </div>
+
+    <div id="div-chats"></div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script type="module" src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+
+  </body>
+</html>
