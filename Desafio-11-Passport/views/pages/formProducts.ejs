@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body>
+    <h1>Cargar productos</h1>
+    <form action="/api/products" method="post" class="form">
+      <label>Título:</label>
+      <input type="text" id="title" name="title" />
+
+      <br />
+
+      <label>Precio:</label>
+      <input type="number" id="price" name="price" />
+
+      <br />
+
+      <label>Imagen:</label>
+      <input type="text" id="thumbnail" name="thumbnail" />
+
+      <br />
+
+      <button type="submit" disabled>PRÓXIMAMENTE</button>
+    </form>
+ <a class="btn" href="/api/home">Volver a Home</a>   
+  </body>
+</html>
