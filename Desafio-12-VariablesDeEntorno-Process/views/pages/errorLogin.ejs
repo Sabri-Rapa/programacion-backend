@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+
+<body onload="redirect()" class="d-flex flex-column min-vh-100"></body>
+    USER ERROR LOGIN
+  </div>
+  <div>
+    Redirigiendo en <span id="time">3</span> segundos
+  </div>
+  <div role="status">
+    <span class="visually-hidden ">Loading...</span>
+  </div>
+  <div>
+    <a href="/api/login">
+      <button>Volver a Log in</button>
+    </a>
+  </div>
+</div>
+
+<script>
+  function redirect() {
+    setTimeout(() => {
+        location.href = "/api/login"
+      }, 3000)}
+
+</script>
+</body>
+
+</html>
