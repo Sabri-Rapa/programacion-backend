@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body>
+    <h1>TU CARRITO</h1>
+
+
+    <div id="products">
+      <table class="table my-1">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Foto</th>
+          </tr>
+        </thead>
+
+        <% if(cart.length){ %>
+
+        <tbody id="productsTable">
+
+          <% cart.forEach((element) => { %>
+          <tr>
+            <th scope="row"><%=element.nombre%></th>
+            <td style="text-transform: uppercase"><%=element.precio%></td>
+            <td>
+              <img src="<%=element.thumbnail%>" class="w-50" alt="..." />
+            </td>
+            <td>
+            <form action="/api/carrito/agregarProducto" method="POST">
+              <input type="hidden" name="prod_id" value=<%=element._id%>>
+              <button  value="<%=element._id%>" onclick="deleteProd(element._id)" >Quitar</button>
+            </td>
+            </form>
+          </tr>
+          <%})%>
+        </tbody>
+        <%}%>
+      </table>
+
+      <div class="d-flex flex-row justify-content-center">
+
+        <form action="/api/carrito/checkout" method="POST">
+          <button type="submit" class="btn btn-success " onclick="">Finalizar Compra</button>
+        </form>
+      </div>
+  
+    </div>
+
+    
+    <a class="btn" href="/api/home">Volver a Home</a>
+    <script type="module" src="/deleteProds.js"></script>
+  </body>
+</html>

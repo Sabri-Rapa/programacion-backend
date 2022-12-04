@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+
+<body onload="redirect()"></body>
+  <div>
+   PRODUCTO CARGADO CON ÉXITO
+  </div>
+  <div class="fs-5">
+    Redirigiendo al listado en <span id="time">3</span> segundos
+  </div>
+</div>
+
+<script>
+  function redirect() {
+    setTimeout(() => {
+        location.href = "/api/home"
+      }, 3000)}
+</script>
+</body>
+
+</html>

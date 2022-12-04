@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body>
+    <h1>Cargar productos</h1>
+    <form action="/api/productos" method="post" id="productsForm">
+      <label>Título:</label>
+      <input type="text" id="title" name="nombre" />
+
+      <br />
+
+      <label>Precio:</label>
+      <input type="number" id="price" name="precio" />
+
+      <br />
+
+      <label>Imagen:</label>
+      <input type="text" id="thumbnail" name="thumbnail" />
+
+      <br />
+
+      <label>Stock:</label>
+      <input type="number" id="stock" name="stock" />
+
+      <br />
+
+      <button type="submit" onclick="addProduct(productsForm)">Agregar</button>
+    </form>
+    <a class="btn" href="/api/home">Volver a Home</a>
+    <script type="module" src="/formAddProducts.js"></script>
+  </body>
+</html>

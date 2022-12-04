@@ -1,0 +1,19 @@
+{
+  "name": "envio-de-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "nodemailer": "node nodemailer.js",
+    "twilio_SMS": "node twilio_SMS.js",
+    "twilio_WS": "node twilio_WS.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.8.0",
+    "twilio": "^3.83.3"
+  }
+}
